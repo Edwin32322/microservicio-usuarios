@@ -212,7 +212,7 @@ npm start
 
 ```bash
 # Ejecutar todos los tests
-npm test
+npm run test
 
 # Modo watch
 npm run test:watch
