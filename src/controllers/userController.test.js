@@ -61,7 +61,7 @@ describe('User Controller', () => {
 
             const response = await request(app)
                 .post('/users')
-                .send({ userPayload: mockUserPayload })
+                .send(mockUserPayload)
                 .expect(201);
 
             expect(response.body).toEqual({
@@ -77,7 +77,7 @@ describe('User Controller', () => {
 
             const response = await request(app)
                 .post('/users')
-                .send({ userPayload: { name: 'Majin Buu' } })
+                .send({ name: 'Majin Buu' })
                 .expect(400);
 
             expect(response.body).toEqual({
@@ -119,7 +119,7 @@ describe('User Controller', () => {
 
             const response = await request(app)
                 .put(`/users/${userId}`)
-                .send({ userPayload })
+                .send(userPayload)
                 .expect(200);
 
             expect(response.body).toEqual({
@@ -135,7 +135,7 @@ describe('User Controller', () => {
 
             const response = await request(app)
                 .put('/users/999')
-                .send({ userPayload: { name: 'Test' } })
+                .send({ name: 'Test' })
                 .expect(400);
 
             expect(response.body).toEqual({
