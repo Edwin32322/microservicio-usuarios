@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Microservicio de usuarios",
   "main": "./src/index.js",
-  "scripts": { 
+  "scripts": {
     "dev": "node --watch ./src/index.js",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -20,5 +20,8 @@
     "pg": "^8.16.3",
     "supertest": "^7.1.4",
     "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.3"
   }
 }
